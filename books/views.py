@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from .models import Book
+from django.http import HttpResponse
 
-def book_list(request):
-    books = Book.objects.all()
-    return render(request, 'books/book_list.html', {'books': books})
+def home(request):
+    return render(request, 'home.html')
+
+def room(request):
+    return render(request, 'room.html')
+
 
 
 # Create your views here.
